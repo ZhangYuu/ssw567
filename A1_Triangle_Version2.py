@@ -25,29 +25,30 @@ class Triangle:
         if(a+b<=c or a+c<=b or b+c<=a):
             answer = "Sorry! It's not a triangle!"
             result = 'n'
-        if(a==b and a==c):
-            answer = "It's a equilateral triangle!"
-            result = 'e'
-        elif(a==b or a==c or b==c):
-            if(round((a*a),5) + round((b*b),5) == round((c*c),5)):
-                answer = "It's an isosceles right triangle!"
-                result = 'ir'
-            else:
-                answer = "It's an isosceles triangle!"
-                result = 'i'
         else:
-            if(round((a*a),5) + round((b*b),5) == round((c*c),5)):
-                answer = "It's a scalene right triangle!"
-                result = 'sr'
-            elif(round((a*a),5) + round((c*c),5) == round((b*b),5)):
-                answer = "It's a scalene right triangle!"
-                result = 'sr'
-            elif(round((c*c),5) + round((b*b),5) == round((a*a),5)):
-                answer = "It's a scalene right triangle!"
-                result = 'sr'
+            if(a==b and a==c):
+                answer = "It's a equilateral triangle!"
+                result = 'e'
+            elif(a==b or a==c or b==c):
+                if(round((a*a),5) + round((b*b),5) == round((c*c),5)):
+                    answer = "It's an isosceles right triangle!"
+                    result = 'ir'
+                else:
+                    answer = "It's an isosceles triangle!"
+                    result = 'i'
             else:
-                answer = "It's a scalene triangle!"
-                result = 's'
+                if(round((a*a),5) + round((b*b),5) == round((c*c),5)):
+                    answer = "It's a scalene right triangle!"
+                    result = 'sr'
+                elif(round((a*a),5) + round((c*c),5) == round((b*b),5)):
+                    answer = "It's a scalene right triangle!"
+                    result = 'sr'
+                elif(round((c*c),5) + round((b*b),5) == round((a*a),5)):
+                    answer = "It's a scalene right triangle!"
+                    result = 'sr'
+                else:
+                    answer = "It's a scalene triangle!"
+                    result = 's'
         
         print (answer)
         return result
@@ -88,3 +89,5 @@ test.test(name, 'sr', 3, 4, 5)
 name = 'Test5'
 test.test(name, 's', 3, 4, 6)
 
+name = 'Test6'
+test.test(name, 'n', 1, 1, 2)
