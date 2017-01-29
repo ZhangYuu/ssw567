@@ -31,7 +31,7 @@ def classifyTriangle(a,b,c):
       BEWARE: there may be a bug or two in this code
         
     """
-    # require that the input values be > 0 and <= 200
+    # require that the input values be > 0 and <= 200    #BUG
     if a > 200 and b > 200 or c > 200:
         return 'InvalidInput'
         
