@@ -92,7 +92,7 @@ class TestTriangles(unittest.TestCase):
         self.assertEqual(classifyTriangle(3,5,201),'InvalidInput','should be InvalidInput') 
     def testClassifyTriangle3(self): # test invalid inputs
         self.assertEqual(classifyTriangle(3,201,5),'InvalidInput','should be InvalidInput')   
-    def testClassifyTriangle4(self): 
+    def testClassifyTriangle4(self): # test invalid inputs
         self.assertEqual(classifyTriangle('a',100,200),'InvalidInput','should be InvalidInput')
     def testClassifyTriangle5(self): # test invalid inputs
         self.assertEqual(classifyTriangle(-1,3,5),'InvalidInput','should be InvalidInput')   
